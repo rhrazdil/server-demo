@@ -1,4 +1,11 @@
-FROM golang:1.15.8
+FROM alpine
+
+RUN apk add --no-cache go curl
+
+# Configure Go
+ENV GOROOT /usr/lib/go
+ENV GOPATH /go
+ENV PATH /go/bin:$PATH
 
 ENV APP_NAME server-demo
 ENV PORT 8080
