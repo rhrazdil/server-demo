@@ -7,7 +7,7 @@ import (
 )
 
 func version(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "v1\n")
+	fmt.Fprintf(w, "v2\n")
 }
 
 func serve() error {
